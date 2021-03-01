@@ -5,7 +5,7 @@ $(document).ready(function(){
 	const BUTTON = $("#nav-button");
 
 	function navControl() {
-		if ($(window).width() <= 1000) {
+		if ($(window).width() <= 1200) {
 			if (NAV.css('left') < '0') {
 				NAV.css('left', '0');
 				BUTTON.css('box-shadow', '0 0');
@@ -57,7 +57,7 @@ $(document).ready(function(){
 	// This acts as a reset in case the user changes their browser window size. 
 	// Unlikely to be needed much, but a safeguard nonetheless
 	$(window).resize(() => {
-		if ($(window).width() <= 1000) {
+		if ($(window).width() <= 1200) {
 			NAV.css({'left': '-100%', 'width': '180px'});
 		} else {
 			NAV.css({'left': '0', 'width': '80px'});
