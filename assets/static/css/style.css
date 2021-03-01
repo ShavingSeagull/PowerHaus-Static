@@ -1,0 +1,88 @@
+/* Navbar */
+#main-nav {
+	background-color: #222222;
+	color: white;
+	font-size: 20px;
+	width: 80px;
+	height: 100%;
+	position: fixed;
+	/* padding: 20px 0 20px 0; */
+	box-shadow: 2px 0 3px #000000;
+	transition: 0.4s;
+	z-index: 2;
+	left: 0;
+}
+
+#main-nav > #nav-list > li {
+    display: inline;
+    list-style-type: none;
+}
+
+#main-nav > #nav-list > li > a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+	padding: 25px 20px;
+	display: block;
+}
+
+#main-nav > #nav-list > li > a:hover {
+	text-decoration: none;
+	border-left: 3px solid red;
+}
+
+#nav-list {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+}
+
+#nav-list > li > a > i {
+	font-size: 2.5rem;
+	width: 40px;
+}
+
+#nav-list > li > a > span {
+	position: relative;
+	bottom: 6px;
+	display: inline;
+	padding-left: 15px;
+	margin: 0;
+}
+
+#nav-button {
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #222222;
+	color: #ffffff;
+	cursor: pointer;
+	z-index: 2;
+	transition: 0.2s;
+	display: none;
+}
+
+#nav-button i {
+    margin: 25% 0 0 28%; /* left margin slightly bigger due to the box-shadow */
+    font-size: 35px;
+}
+
+/* /.Navbar */
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+	#main-nav {
+		left: -100%;
+		width: 180px;
+	}
+
+	#nav-button {
+		display: block;
+		box-shadow: 4px 4px 3px #000000;
+	}
+}
