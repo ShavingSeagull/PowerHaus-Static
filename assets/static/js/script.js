@@ -5,7 +5,6 @@ $(document).ready(function(){
 	const BUTTON = $("#nav-button");
 
 	function navControl() {
-
 		if ($(window).width() <= 1000) {
 			if (NAV.css('left') < '0') {
 				NAV.css('left', '0');
@@ -24,9 +23,10 @@ $(document).ready(function(){
 	}
 
 	function showElements() {
-		// The check prevents the elements appearing if the user quickly mouses
-		// in and out, which would create overflow
-		if (NAV.css('left') == '0px' || NAV.css('width') == '180px') {
+		// Checks if the mouse is still on the nav when the function fires after
+		// the timeout. This prevents overflow occuring from the user mousing in 
+		// and out of the nav quickly
+		if ($('#main-nav:hover').length != 0) {
 			NAVHIDDENELEMS.removeClass('d-none');
 		}
 	}
