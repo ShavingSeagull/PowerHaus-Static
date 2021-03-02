@@ -3,21 +3,26 @@ $(document).ready(function(){
 	const NAV = $("#main-nav");
 	const NAVHIDDENELEMS = $("#nav-list").children('li').children('a').children('span');
 	const BUTTON = $("#nav-button");
+	const OVERLAY = $(".overlay");
 
 	function navControl() {
 		if ($(window).width() <= 1200) {
 			if (NAV.css('left') < '0') {
 				NAV.css('left', '0');
 				BUTTON.css('box-shadow', '0 0');
+				OVERLAY.removeClass('d-none');
 			} else {
 				NAV.css('left', '-100%');
 				BUTTON.css('box-shadow', '2px 0 3px #000');
+				OVERLAY.addClass('d-none');
 			}
 		} else {
 			if (NAV.width() == 80) {
 				NAV.css('width', '180px');
+				OVERLAY.removeClass('d-none');
 			} else {
 				NAV.css('width', '80px');
+				OVERLAY.addClass('d-none');
 			}
 		}
 	}

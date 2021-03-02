@@ -1,3 +1,18 @@
+/* Universal Rules */
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("../../images/matwork.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* /.Universal Rules */
+
 /* Navbar */
 #main-nav {
 	background-color: #222222;
@@ -6,11 +21,11 @@
 	width: 80px;
 	height: 100%;
 	position: fixed;
-	/* padding: 20px 0 20px 0; */
 	box-shadow: 2px 0 3px #000000;
 	transition: 0.4s;
-	z-index: 2;
+	z-index: 3;
 	left: 0;
+	top: 0;
 }
 
 #main-nav > #nav-list > li {
@@ -29,6 +44,7 @@
 #main-nav > #nav-list > li > a:hover {
 	text-decoration: none;
 	border-left: 3px solid red;
+	color: orange;
 }
 
 #nav-list {
@@ -62,7 +78,7 @@
 	background-color: #222222;
 	color: #ffffff;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 3;
 	transition: 0.2s;
 	display: none;
 }
@@ -74,8 +90,29 @@
 
 /* /.Navbar */
 
+/* Overlay for darkening when nav is open */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+}
+
+/* /.Overlay */
+
+/* Footer */
+footer {
+	background-color: #222222;
+	color: white;
+}
+
+/* /.Footer */
+
 /* Media Queries */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 	#main-nav {
 		left: -100%;
 		width: 180px;
