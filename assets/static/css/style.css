@@ -18,7 +18,6 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
     font-family: life_is_okayregular, "Arial Black", sans-serif;
 }
-
 /* /.Universal Rules */
 
 /* Navbar */
@@ -95,8 +94,19 @@ h1, h2, h3, h4, h5, h6 {
     margin: 25% 0 0 28%; /* left margin slightly bigger due to the box-shadow */
     font-size: 35px;
 }
-
 /* /.Navbar */
+
+/* Overlay for darkening when nav is open */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+}
+/* /.Overlay */
 
 /* Header - Credit to W3Schools for the Hero inspiration */
 .hero-img {
@@ -120,29 +130,41 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-text > h1 {
 	font-size: 3em;
+	text-shadow: 2px 2px #000000;
 }
-
 /* /.Header */
 
-/* Overlay for darkening when nav is open */
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.7);
+/* Product Range Section */
+.product-range-section h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3em;
+	text-shadow: 1px 2px 1px #222222;
 }
 
-/* /.Overlay */
+.product-range-section h1 > span {
+	color: red;
+}
+
+.range-card-wrapper {
+	background-color: rgba(0,0,0,0.1);
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.range-card h3, .range-card p, .range-card i {
+	text-align: center;
+}
+
+.range-card i {
+	font-size: 3em;
+}
 
 /* Footer */
 footer {
 	background-color: #222222;
 	color: white;
 }
-
 /* /.Footer */
 
 /* Media Queries */
@@ -160,10 +182,18 @@ footer {
 	.hero-text > h1 {
 		font-size: 2.5em;
 	}
+
+	.product-range-section h1 {
+		font-size: 2.5em;
+	}
 }
 
 @media screen and (max-width: 500px) {
 	.hero-text > h1 {
+		font-size: 2em;
+	}
+
+	.product-range-section h1 {
 		font-size: 2em;
 	}
 }
