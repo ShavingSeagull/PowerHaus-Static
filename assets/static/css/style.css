@@ -1,11 +1,36 @@
 @font-face {
     font-family: life_is_okayregular;
-    src: url("../fonts/LifeIsOkay.eot"); /* IE9 */
-    src: url("../fonts/LifeIsOkay.eot?#iefix") format("embedded-opentype"), /* IE6-8 */
-         url("../fonts/Life Is Okay.otf") format("opentype"),
-         url("../fonts/life_is_okay-webfont.ttf") format("truetype"),
-         url("../fonts/life_is_okay-webfont.woff") format("woff"),
-         url("../fonts/life_is_okay-webfont.woff2") format("woff2");
+    src: url("../fonts/life_is_okay/LifeIsOkay.eot"); /* IE9 */
+    src: url("../fonts/life_is_okay/LifeIsOkay.eot?#iefix") format("embedded-opentype"), /* IE6-8 */
+         url("../fonts/life_is_okay/Life Is Okay.otf") format("opentype"),
+         url("../fonts/life_is_okay/life_is_okay-webfont.ttf") format("truetype"),
+         url("../fonts/life_is_okay/life_is_okay-webfont.woff") format("woff"),
+         url("../fonts/life_is_okay/life_is_okay-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Ruda;
+    src: url("../fonts/ruda/static/Ruda-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Saira;
+    src: url("../fonts/saira/static/Saira-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Actor;
+    src: url("../fonts/actor/Actor-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: pontano_sans;
+    src: url("../fonts/pontano_sans/PontanoSans-Regular.ttf") format("truetype");
 }
 
 /* Universal Rules */
@@ -17,6 +42,21 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: life_is_okayregular, "Arial Black", sans-serif;
+	text-transform: uppercase;
+}
+
+section h1 {
+	text-align: center;
+	font-size: 3em;
+	text-shadow: 1px 2px 1px #222222;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 /* /.Universal Rules */
 
@@ -108,15 +148,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* /.Overlay */
 
-/* Header - Credit to W3Schools for the Hero inspiration */
+/* Header */
 .hero-img {
 	background-image: url("../../images/matwork.jpg");
 	background-color: #222222;
-	height: 500px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
+	min-height: 100%;
 }
 
 .hero-text {
@@ -129,19 +165,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-text > h1 {
-	font-size: 3em;
+	font-size: 4em;
 	text-shadow: 2px 2px #000000;
 }
 /* /.Header */
 
 /* Product Range Section */
-.product-range-section h1 {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 3em;
-	text-shadow: 1px 2px 1px #222222;
-}
-
 .product-range-section h1 > span {
 	color: red;
 }
@@ -150,15 +179,37 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: rgba(0,0,0,0.1);
 	padding: 15px;
 	border-radius: 10px;
+	box-shadow: 2px 3px 2px #000000;
+}
+
+.range-card-wrapper:hover {
+	background-color: rgba(255,165,0,0.5);
 }
 
 .range-card h3, .range-card p, .range-card i {
 	text-align: center;
 }
 
+.range-card p {
+	font-family: pontano_sans, sans-serif;
+}
+
 .range-card i {
 	font-size: 3em;
 }
+/* /.Product Range Section */
+
+/* Featured Products Section */
+.featured-products-section {
+	background-image: url("../../images/deadlift.jpg");
+	background-color: #222222;
+	/* min-height: 100%; */
+}
+
+.featured-products-section h1 {
+	color: #ffffff;
+}
+/* /.Featured Products Section */
 
 /* Footer */
 footer {
@@ -168,7 +219,11 @@ footer {
 /* /.Footer */
 
 /* Media Queries */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
+	.parallax {
+		background-attachment: scroll;
+	}
+	
 	#main-nav {
 		left: -100%;
 		width: 180px;
@@ -180,20 +235,34 @@ footer {
 	}
 
 	.hero-text > h1 {
-		font-size: 2.5em;
+		font-size: 3.5em;
 	}
 
-	.product-range-section h1 {
+	section h1 {
 		font-size: 2.5em;
 	}
 }
 
-@media screen and (max-width: 500px) {
+/* Change of image to fit the smaller orientation */
+@media screen and (max-width: 700px) {
+	.hero-img {
+		background-image: url("../../images/ezbar.jpg");
+	}
+}
+
+/* Change of image to fit the smaller orientation */
+@media screen and (max-width: 576px) {
+	.featured-products-section {
+		background-image: url("../../images/kettlebell.jpg");
+	}
+}
+
+@media screen and (max-width: 560px) {
 	.hero-text > h1 {
-		font-size: 2em;
+		font-size: 2.2em;
 	}
 
-	.product-range-section h1 {
+	section h1 {
 		font-size: 2em;
 	}
 }
