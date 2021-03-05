@@ -1,72 +1,24 @@
-$(document).ready(function(){
+$(document).ready(function() {
+	// Remove the last three featured products on phone screens to prevent the 
+	// user having to scroll for a long period to reach the end of the page
+	function addRemoveProducts() {
+		const FEATUREDPRODUCTS = document.getElementsByClassName('featured-product');
 
-	const NAV = $("#main-nav");
-	const NAVHIDDENELEMS = $("#nav-list").children('li').children('a').children('span');
-	const BUTTON = $("#nav-button");
-	const OVERLAY = $(".overlay");
-
-	function navControl() {
-		if ($(window).width() <= 1200) {
-			if (NAV.css('left') < '0') {
-				NAV.css('left', '0');
-				BUTTON.css('box-shadow', '0 0');
-				OVERLAY.removeClass('d-none');
-			} else {
-				NAV.css('left', '-100%');
-				BUTTON.css('box-shadow', '2px 0 3px #000');
-				OVERLAY.addClass('d-none');
+		if ($(window).innerWidth() <= 576) {
+			// Only removes products 3-6, leaving three on-screen
+			for (let i = 3; i < FEATUREDPRODUCTS.length; i++) {
+				FEATUREDPRODUCTS.item(i).classList.add('d-none');
 			}
 		} else {
-			if (NAV.width() == 80) {
-				NAV.css('width', '180px');
-				OVERLAY.removeClass('d-none');
-			} else {
-				NAV.css('width', '80px');
-				OVERLAY.addClass('d-none');
-			}
+			$('.featured-product').removeClass('d-none');
 		}
 	}
 
-	function showElements() {
-		// Checks if the mouse is still on the nav when the function fires after
-		// the timeout. This prevents overflow occuring from the user mousing in 
-		// and out of the nav quickly
-		if ($('#main-nav:hover').length != 0) {
-			NAVHIDDENELEMS.removeClass('d-none');
-		}
-	}
+	addRemoveProducts();
 
-	function hideElements() {
-		NAVHIDDENELEMS.addClass('d-none');
-	}
-
-	// Event handlers for mousing over on larger screens
-	$(NAV).mouseenter(() => {
-		navControl();
-		// Timeout has to fire slightly after the CSS transition property of 0.4s
-		setTimeout(showElements, 410);
-
-	});
-
-	$(NAV).mouseleave(() => {
-		navControl();
-		hideElements();
-	});
-
-	// Click handler for nav button on smaller screens
-	$("#nav-button").click(() => {
-		navControl();
-		NAVHIDDENELEMS.removeClass('d-none');
-	});
-
-	// This acts as a reset in case the user changes their browser window size. 
-	// Unlikely to be needed much, but a safeguard nonetheless
+	// A safeguard to keep the correct number of products on-screen if the 
+	// user resizes their browser window
 	$(window).resize(() => {
-		if ($(window).width() <= 1200) {
-			NAV.css({'left': '-100%', 'width': '180px'});
-		} else {
-			NAV.css({'left': '0', 'width': '80px'});
-		}
-		hideElements();
+		addRemoveProducts();
 	});
 });
