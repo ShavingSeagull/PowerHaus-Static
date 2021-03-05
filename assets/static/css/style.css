@@ -209,6 +209,11 @@ section h1 {
 .featured-products-section h1 {
 	color: #ffffff;
 }
+
+.featured-product > img {
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px #000000;
+}
 /* /.Featured Products Section */
 
 /* Footer */
