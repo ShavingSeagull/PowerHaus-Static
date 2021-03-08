@@ -10,7 +10,9 @@
 
 /*** Product Range Section ***/
 .range-card-wrapper {
-	background-color: rgba(0,0,0,0.1);
+	background-image: url("../../images/metal_bg.jpg");
+	background-size: cover;
+	background-color: #222222;
 	padding: 15px;
 	border-radius: 10px;
 	box-shadow: 2px 3px 2px #000000;
@@ -18,6 +20,8 @@
 
 .range-card h3, .range-card p, .range-card i {
 	text-align: center;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
 }
 
 .range-card p {
@@ -47,6 +51,8 @@
 
 /*** Why Choose Us Section ***/
 .usps {
+	background-image: url("../../images/metal_bg.jpg");
+	background-size: cover;
 	background-color: rgba(0,0,0,0.1);
 	box-shadow: 2px 3px 2px #000000;
 	border-radius: 5px;
@@ -55,6 +61,8 @@
 .choose-us-section p, .choose-us-section ul {
 	font-family: life_is_okayregular, 'Arial Black', sans-serif;
 	font-size: 1.2em;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
 }
 
 .usp-list {
