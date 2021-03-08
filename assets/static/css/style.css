@@ -82,7 +82,7 @@ section h1 {
 .nav-branding {
 	position: absolute;
 	top: 70px;
-	font-family: life_is_okayregular, 'Arial black', sans-serif;
+	font-family: life_is_okayregular, 'Arial Black', sans-serif;
 	font-size: 2.7em;
 	text-transform: uppercase;
 	padding-left: 15px;
@@ -99,6 +99,7 @@ section h1 {
 	width: 100%;
 	padding: 0;
 	list-style-type: none;
+	font-family: life_is_okayregular, 'Arial Black', sans-serif;
 }
 
 #nav-list > li > a > i {
@@ -206,7 +207,7 @@ section h1 {
 
 /* Why Choose Us Section */
 .choose-us-section p, .choose-us-section ul {
-	font-family: life_is_okayregular, 'Arial black', sans-serif;
+	font-family: life_is_okayregular, 'Arial Black', sans-serif;
 	font-size: 1.2em;
 }
 
