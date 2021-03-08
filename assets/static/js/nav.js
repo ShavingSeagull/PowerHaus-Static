@@ -5,7 +5,7 @@ $(document).ready(function() {
 	const OVERLAY = $(".overlay");
 
 	function navControl() {
-		if ($(window).innerWidth() <= 1250) {
+		if ($(window).innerWidth() <= 1300) {
 			if (NAV.css('left') < '0') {
 				NAV.css('left', '0');
 				BUTTON.css('box-shadow', '0 0');
@@ -67,7 +67,7 @@ $(document).ready(function() {
 	// This acts as a reset in case the user changes their browser window size. 
 	// Unlikely to be needed much, but a safeguard nonetheless
 	$(window).resize(() => {
-		if ($(window).innerWidth() <= 1250) {
+		if ($(window).innerWidth() <= 1300) {
 			NAV.css({'left': '-100%', 'width': '180px'});
 		} else {
 			NAV.css({'left': '0', 'width': '80px'});

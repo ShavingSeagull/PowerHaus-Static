@@ -246,7 +246,7 @@ footer {
 /* /.Footer */
 
 /* Media Queries */
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
 	.parallax {
 		background-attachment: scroll;
 	}
