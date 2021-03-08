@@ -58,6 +58,12 @@ $(document).ready(function() {
 		NAVHIDDENELEMS.removeClass('d-none');
 	});
 
+	// Click handler to close the nav if the user clicks outside the nav
+	$(OVERLAY).click(() => {
+		navControl();
+		NAVHIDDENELEMS.removeClass('d-none');
+	})
+
 	// This acts as a reset in case the user changes their browser window size. 
 	// Unlikely to be needed much, but a safeguard nonetheless
 	$(window).resize(() => {
