@@ -49,6 +49,11 @@ section h1 {
 	font-size: 1.2em;
 }
 
+/* Prevents a floating footer on pages with less content */
+.no-floating-footer {
+    min-height: 100vh;
+}
+
 /*** Navbar ***/
 #main-nav {
 	background-color: #222222;
