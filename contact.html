@@ -55,7 +55,7 @@
     </header>
     <!-- /.Header and Hero -->
 
-    <!-- About Section -->
+    <!-- Contact Section -->
     <section class="container contact-section mt-5 no-floating-footer">
         <div class="row">
             <div class="col-sm-12 col-lg-9">
@@ -73,7 +73,7 @@
             </small>
         </div>
         <div class="row my-5">
-            <form class="col-lg-9" id="contact-form">
+            <form class="col-lg-9" id="contact-form" action="" method="POST">
                 <div class="form-group">
                     <label for="fname">First name (<span>*</span>) :</label>
                     <input name="fname" id="fname" type="text" class="form-control" placeholder="John" required />
@@ -89,6 +89,7 @@
                 <div class="form-group">
                     <label for="subjectSelection">Message subject (<span>*</span>) :</label>
                     <select class="form-control" id="subjectSelection" name="subjectSelection" required>
+                        <option value="">Please Select...</option>
                         <option value="generalEnquiry">General enquiry</option>
                         <option value="feedback">Feedback</option>
                         <option value="careers">Careers</option>
@@ -103,11 +104,30 @@
                     <label for="message">Message (<span>*</span>) :</label>
                     <textarea name="message" id="message" class="form-control" placeholder="Your message here..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary">Send</button>
+                <button type="submit" class="btn btn-lg btn-info">Send</button>
             </form>
         </div>
     </section>
-    <!-- /.About Section -->
+    <!-- /.Contact Section -->
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="messageModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Thanks for your message!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Your message has been received and a member of the team will get back to you shortly.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Confirmation Modal -->
 
     <!-- Footer -->
     <footer>
@@ -125,5 +145,6 @@
     <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
     <!-- Custom scripts -->
     <script src="assets/static/js/nav.js"></script>
+    <script src="assets/static/js/script.js"></script>
 </body>
 </html>

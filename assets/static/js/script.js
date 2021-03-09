@@ -14,11 +14,19 @@ $(document).ready(function() {
 		}
 	}
 
+	// Call the function on page load
 	addRemoveProducts();
 
 	// A safeguard to keep the correct number of products on-screen if the 
 	// user resizes their browser window
 	$(window).resize(() => {
 		addRemoveProducts();
+	});
+
+	// Submission listener to fire the modal when the contact form has been sent
+	$('#contact-form').submit(function(e) {
+		e.preventDefault();
+		$('#messageModal').modal();
+		this.reset();
 	});
 });
