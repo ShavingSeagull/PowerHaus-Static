@@ -30,7 +30,7 @@ p, form {
 	font-family: pontano_sans, sans-serif;
 }
 
-section h1 {
+section h2 {
 	text-align: center;
 	font-size: 3em;
 	text-shadow: 2px 2px 4px #222222;
@@ -212,7 +212,7 @@ footer {
 		font-size: 3.5em;
 	}
 
-	section h1 {
+	section h2 {
 		font-size: 2.5em;
 	}
 }
@@ -222,7 +222,7 @@ footer {
 		font-size: 2.2em;
 	}
 
-	section h1 {
+	section h2 {
 		font-size: 2em;
 	}
 }

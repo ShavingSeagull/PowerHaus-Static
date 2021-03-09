@@ -11,6 +11,10 @@
     font-weight: bold;
 }
 
+.about-section h2 {
+    text-align: left;
+}
+
 .about-section .metal-header {
     font-size: 3.5em;
 }
